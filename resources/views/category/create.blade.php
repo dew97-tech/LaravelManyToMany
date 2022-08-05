@@ -38,13 +38,7 @@
                 <input type="text" name="title" class="form-control" placeholder="Name">
             </div>
         </div>
-        {{-- for one to many relationship --}}
-        {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Android Version:</strong>
-                <textarea class="form-control" style="height:150px" name="android_version" placeholder="Android Version"></textarea>
-            </div>
-        </div> --}}
+
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>

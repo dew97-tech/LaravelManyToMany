@@ -34,13 +34,7 @@
                     <input type="text" name="title" value="{{ $category->title }}" class="form-control" placeholder="Name">
                 </div>
             </div>
-            {{-- For One to Many Relationship --}}
-            {{-- <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Andriod Version:</strong>
-                    <textarea class="form-control" style="height:150px" name="android_version" placeholder="phone_number">{{ $category->'android_version' }}</textarea>
-                </div>
-            </div> --}}
+            
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>

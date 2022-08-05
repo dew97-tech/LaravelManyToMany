@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+
+use App\Http\Controllers\CategoryproductController;
 use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +17,13 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/',  [ProductController::class, 'index'])->name('index');
-Route::get('category',  [CategoryController::class, 'index'])->name('category.index');
+Route::get('category',  [CategoryController::class, 'index'])->name('index');
+// Route::get('categoryproducts',  [CategoryproductController::class, 'index'])->name('categoryproducts.index');
 
 // Route::get('/',  'ProductController@index');
 // Route::get('category',  'CategoryController@index');
 
 Route::resource('products', ProductController::class);
-// Route::resource('category', CategoryController::class);
+Route::resource('category', CategoryController::class);
+
+// Route::resource('categoryproducts', CategoryproductController::class);

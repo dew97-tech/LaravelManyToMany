@@ -22,7 +22,7 @@
                 <a class="btn btn-secondary" href="{{ route('products.index') }}"> Homepage </a>
             </div>
             <div class="pull-left my-3">
-                <a class="btn btn-secondary" href="{{ route('category.index') }}"> Go to Category </a>
+                <a class="btn btn-secondary" href="{{ route('category.index') }}"> Go to Category Table </a>
             </div>
         </div>
     </div>
@@ -33,26 +33,37 @@
         </div>
     @endif
 {{-- Show Data Layout --}}
-    <table class="table table-bordered">
+    <table class="table table-hover">
         <tr>
             <th>Product_ID</th>
             <th>Name</th>
             <th>Price</th>
+            <th >Category</th>
+            <th >Category</th>
             {{-- <th>Details</th>
             <th>Model No</th>
             <th>Android Version</th> --}}
-            <th width="280px">Action</th>
+            <th width="300px">Action</th>
         </tr>
         @foreach ($products as $product)
+       
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $product->name }}</td>
             <td>{{ $product->price }}</td>
+            @foreach ($product->categories as $category)
+                <td>{{ $category->title}}</td>
+
+                
+          
+            @endforeach
+            {{-- <td>{{ dd($product->name) }}</td>
+            
             {{-- <td>{{ $product->details }}</td> --}}
             {{-- <td>{{ $product->category_products->category_id }}</td> --}}
             {{-- <td>{{ $product->category->android_version }}</td>  --}}
             
-            <td>
+            <td class="text-center" colspan="2">
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
                     <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
                     <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>

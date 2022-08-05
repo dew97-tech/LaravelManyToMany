@@ -58,32 +58,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // Product::create([
-        //     'name' => $request->name,
-        //     'price'=>$request->price,
-        //     // 'category_id' => $request->category_id,       
-        // ]);
 
         $request->validate([
             'name' => 'required',
             'price' => 'required',
-            // 'details' => 'required',
-            'category_id' => 'required',       
+            'category_id' => 'required',   
         ]);
         
         $product = new Product();
 
         $product ->name = $request->input('name');
         $product ->price = $request->input('price');
+        
 
         $ck=$product->save(); 
         // dd($product) ;
-
-        
-
-         
-        
-        $product->categories()->attach($request->input('category_id'));
+        // dd($request->category_id);
+        $category = Category::find([$request->category_id,$request->subCategory_id]);
+        // dd($category);
+        $product->categories()->sync($category);
         
         
         

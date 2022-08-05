@@ -47,8 +47,14 @@
         {{-- Connecting to categoryID --}}
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Insert Category:</strong>
-                <textarea class="form-control" style="height:150px" name="category_id" placeholder="categoryID"></textarea>
+                <strong>Insert CategoryID:</strong>
+                <textarea class="form-control" style="height:150px" name="category_id[]" placeholder="Enter Category of the Product"></textarea>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Insert SubCategoryID:<br><b>If Necessary</b></strong>
+                <textarea class="form-control" style="height:150px" name="subCategory_id[]" placeholder="Enter SubCategory of the Product"></textarea>
             </div>
         </div>
         {{-- <div class="col-xs-12 col-sm-12 col-md-12">

@@ -21,6 +21,6 @@ class Category extends Model
 
     // For many to many relationship
     public function products(){
-        return $this->belongsToMany(Product::class,'category_products');
+        return $this->belongsToMany(Product::class,'category_products')->withPivot('category_id','product_id')->withTimestamps();
     }
 }

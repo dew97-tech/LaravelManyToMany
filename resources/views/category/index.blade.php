@@ -47,6 +47,7 @@
             <td>{{ $category->id }}</td>
             {{-- <td>{{ $category->category_product->product_id }}</td> --}}
             <td>{{ $category->title }}</td>
+            {{-- <td>{{ dd($category->pivot->product_id) }}</td> --}}
             {{-- <td>{{ $product->category->title }}</td> --}}
             {{-- <td>{{ $product->category->android_version}}</td>
             <td>{{ $product->details }}</td> --}}
